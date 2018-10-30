@@ -1,12 +1,12 @@
 <?php
  include('conecta.php');
- include('banco-medico.php');
+ include('banco-ambulatorio.php');
 
 $codigo = $_POST['codigo'];
 try{
-    deletarMedico($conexao,$codigo);
+    deletarAmb($conexao,$codigo);
     $conexao->close();
-    header("Location:tela-listar-medicos.php");
+    header("Location:tela-listar-ambulatorio.php");
 
 } catch(Exception $e){
      echo "Erro: $e";
